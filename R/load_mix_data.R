@@ -3,7 +3,7 @@
 #' \code{load_mix_data} loads the mixture data file and names the biotracers and
 #' any Fixed, Random, or Continuous Effects.
 #'
-#' @param filename name of file with the mixture/consumer data
+#' @param filename name of the .csv or data.frame file with the mixture/consumer data
 #' @param iso_names vector of isotope column headings in 'filename'
 #' @param factors vector of random/fixed effect column headings in 'filename'.
 #'          NULL if no factors.
