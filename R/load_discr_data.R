@@ -16,7 +16,7 @@
 #' }
 #' @export
 load_discr_data <- function(filename,mix){
-  DISCR <- read.csv(filename)
+  if(grepl(".*.csv", filename)) DISCR <- read.csv(filename) else DISCR <- filename # TDF data (.csv or dataframe)
   row.names(DISCR)<-DISCR[,1]     # store the row names of DISCR (sources)
   DISCR <- as.matrix(DISCR[-1])   # remove source names column of DISCR
   DISCR <- DISCR[order(rownames(DISCR)),]  # rearrange DISCR so sources are in alphabetical order
