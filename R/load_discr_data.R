@@ -6,7 +6,7 @@
 #' then set TDF = 0 (ex. essential fatty acids, fatty acid profile data,
 #' element concentrations).
 #'
-#' @param filename csv file with the discrimination data
+#' @param filename csv file or data.frame with the discrimination data
 #' @param mix output from \code{\link{load_mix_data}}
 #'
 #' @return discr, a list including:
