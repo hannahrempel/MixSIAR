@@ -136,7 +136,7 @@ load_mix_data <- function(filename,iso_names,factors,fac_random,fac_nested,cont_
   if(n.effects > 0){
     for(i in 1:n.effects){
       re <- fac_random[i] # is the ith factor a random effect (TRUE) or fixed effect (FALSE)?
-      fac_values <- X[,factors[i]]
+      fac_values <- unlist(X[,factors[i]]) #unlist() wrapper is a modification from the original to allow for data.frames to be used
       fac_name <- factors[i]
       fac_levels <- length(unique(fac_values))
       if(is.numeric(fac_values)){ # if the factor was input as numbers, add the column name to each number (e.g. "Region 1", "Region 2", "Region 3")
